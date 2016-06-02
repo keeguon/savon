@@ -78,6 +78,7 @@ module Savon
       configure_ssl
       configure_auth
       configure_redirect_handling
+      configure_attachments options[:attachments]
 
       @http_request
     end
@@ -93,5 +94,7 @@ module Savon
       @http_request.headers["SOAPAction"]   ||= %{"#{soap_action}"} if soap_action
       @http_request.headers["Content-Type"] ||= CONTENT_TYPE[@globals[:soap_version]] % @globals[:encoding]
     end
+
+    def configure_attachments(atta)
   end
 end

@@ -406,5 +406,10 @@ module Savon
     def multipart(multipart)
       @options[:multipart] = multipart
     end
+
+    # Add attachments (only available through the :net_http adapter with the multipart-post extension enabled)
+    def attachments(attachments)
+      @options[:attachments] = attachments
+    end
   end
 end

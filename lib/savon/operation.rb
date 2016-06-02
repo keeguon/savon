@@ -100,7 +100,8 @@ module Savon
 
       request = SOAPRequest.new(@globals).build(
         :soap_action => soap_action,
-        :cookies     => @locals[:cookies]
+        :cookies     => @locals[:cookies],
+        :attachments => @locals[:attachments] || {}
       )
 
       request.url = endpoint
