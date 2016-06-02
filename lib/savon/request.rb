@@ -95,6 +95,8 @@ module Savon
       @http_request.headers["Content-Type"] ||= CONTENT_TYPE[@globals[:soap_version]] % @globals[:encoding]
     end
 
-    def configure_attachments(atta)
+    def configure_attachments(attachments)
+      @http_request.attachments(attachments)
+    end
   end
 end
