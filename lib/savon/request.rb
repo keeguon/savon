@@ -96,7 +96,7 @@ module Savon
     end
 
     def configure_attachments(attachments)
-      @http_request.attachments(attachments)
+      @http_request.attachments = attachments
     end
   end
 end
